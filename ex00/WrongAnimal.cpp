@@ -1,41 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   WrongWrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: armitite <armitite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/07 15:26:43 by armitite          #+#    #+#             */
-/*   Updated: 2025/02/07 17:25:31 by armitite         ###   ########.fr       */
+/*   Created: 2025/02/07 17:32:17 by armitite          #+#    #+#             */
+/*   Updated: 2025/02/07 17:33:25 by armitite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.class.hpp"
+#include "WrongAnimal.class.hpp"
 
-Animal::Animal(void) {
+WrongAnimal::WrongAnimal(void) {
 
-	std::cout << "Animal default constructor called" << std::endl;
-	this->sound = "No sound";
+	std::cout << "WrongAnimal default constructor called" << std::endl;
+	this->sound = "Wrong Sound";
 	return ;
 }
 
-Animal::Animal(Animal const &copy) {
+WrongAnimal::WrongAnimal(WrongAnimal const &copy) {
 
-	std::cout << "Animal copy constructor called" << std::endl;
+	std::cout << "WrongAnimal copy constructor called" << std::endl;
 	this->type = copy.type;
 	this->sound = copy.sound;
 	
 	return ;
 }
 
-Animal::~Animal(void) {
+WrongAnimal::~WrongAnimal(void) {
 
-	std::cout << "Animal destructor called" << std::endl;
+	std::cout << "WrongAnimal destructor called" << std::endl;
 
 	return ;
 }
 
-Animal	&Animal::operator=(Animal const &assign) {
+WrongAnimal	&WrongAnimal::operator=(WrongAnimal const &assign) {
 
 	if (this != &assign)
 	{
@@ -46,7 +46,7 @@ Animal	&Animal::operator=(Animal const &assign) {
 	return (*this);
 }
 
-void	Animal::makeSound(void) const {
+void	WrongAnimal::makeSound(void) const {
 
 	
 	std::cout << this->sound << std::endl;
@@ -54,21 +54,14 @@ void	Animal::makeSound(void) const {
 	return ;
 }
 
-void	Animal::setType(std::string type) {
+void	WrongAnimal::setType(std::string type) {
 
 	this->type = type;
 
 	return ;
 }
 
-std::string	Animal::getType(void) const {
+std::string	WrongAnimal::getType(void) const {
 
 	return (this->type);
-}
-
-void	Animal::setSound(std::string sound) {
-
-	this->sound = sound;
-
-	return ;
 }

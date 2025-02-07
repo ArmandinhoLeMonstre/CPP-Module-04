@@ -1,45 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: armitite <armitite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/07 15:26:33 by armitite          #+#    #+#             */
-/*   Updated: 2025/02/07 17:30:00 by armitite         ###   ########.fr       */
+/*   Created: 2025/02/07 17:32:15 by armitite          #+#    #+#             */
+/*   Updated: 2025/02/07 17:42:20 by armitite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.class.hpp"
-#include "Dog.class.hpp"
+#include "WrongAnimal.class.hpp"
+#include "WrongCat.class.hpp"
 #include <iostream>
 
-Dog::Dog(void) {
+WrongCat::WrongCat(void) {
 
-	std::cout << "Dog default constructor called" << std::endl;
-	setType("Dog");
-	setSound("Waf");
+	std::cout << "WrongCat default constructor called" << std::endl;
+	setType("WrongCat");
 
 	return ;
 }
 
-Dog::Dog(Dog const &copy) : Animal(copy) {
+WrongCat::WrongCat(WrongCat const &copy) : WrongAnimal(copy) {
 
-	std::cout << "Dog default constructor called" << std::endl;
+	std::cout << "WrongCat default constructor called" << std::endl;
 	this->type = copy.type;
 	this->sound = copy.sound;
 
 	return ;
 }
 
-Dog::~Dog(void) {
+WrongCat::~WrongCat(void) {
 	
-	std::cout << "Dog destructor called" << std::endl;
+	std::cout << "WrongCat destructor called" << std::endl;
 
 	return ;
 }
 
-Dog	&Dog::operator=(Dog const &assign) {
+WrongCat	&WrongCat::operator=(WrongCat const &assign) {
 
 	if (this != &assign)
 	{

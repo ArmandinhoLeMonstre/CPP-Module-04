@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.class.hpp                                   :+:      :+:    :+:   */
+/*   WrongAnimal.class.hpp                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: armitite <armitite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/07 15:26:46 by armitite          #+#    #+#             */
-/*   Updated: 2025/02/07 17:29:18 by armitite         ###   ########.fr       */
+/*   Created: 2025/02/07 17:32:19 by armitite          #+#    #+#             */
+/*   Updated: 2025/02/07 17:40:52 by armitite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-#define ANIMAL_HPP
+#ifndef WRONGANIMAL_HPP
+#define WRONGANIMAL_HPP
 #include <iostream>
 
-class Animal {
+class WrongAnimal {
 
 private:
 
@@ -26,18 +26,15 @@ protected:
 
 public:
 	
-	Animal();
-	Animal(Animal const &copy);
-	Animal & operator=(Animal const &assign);
-	~Animal();
+	WrongAnimal();
+	WrongAnimal(WrongAnimal const &copy);
+	WrongAnimal & operator=(WrongAnimal const &assign);
+	~WrongAnimal();
 
 	void			makeSound(void) const;
 	void			setType(std::string type);
-	void			setSound(std::string sound);
 	std::string		getType(void) const;
 	
 };
-
-
 
 #endif
