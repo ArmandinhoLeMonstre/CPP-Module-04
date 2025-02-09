@@ -19,6 +19,7 @@ Cat::Cat(void) {
 	std::cout << "Cat default constructor called" << std::endl;
 	setType("Cat");
 	setSound("Meovv");
+	this->Cat_Brain = new Brain();
 
 	return ;
 }
@@ -28,6 +29,7 @@ Cat::Cat(Cat const &copy) : Animal(copy) {
 	std::cout << "Cat default constructor called" << std::endl;
 	this->type = copy.type;
 	this->sound = copy.sound;
+	this->Cat_Brain = copy.Cat_Brain;
 
 	return ;
 }
@@ -35,7 +37,8 @@ Cat::Cat(Cat const &copy) : Animal(copy) {
 Cat::~Cat(void) {
 	
 	std::cout << "Cat destructor called" << std::endl;
-
+	delete this->Cat_Brain;
+	
 	return ;
 }
 
@@ -45,6 +48,8 @@ Cat	&Cat::operator=(Cat const &assign) {
 	{
 		this->type = assign.type;
 		this->sound = assign.sound;
+		delete this->Cat_Brain;
+		this->Cat_Brain = new Brain(*assign.Cat_Brain);
 	}
 
 	return (*this);
