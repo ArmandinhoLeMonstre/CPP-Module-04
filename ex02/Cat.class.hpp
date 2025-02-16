@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.class.hpp                                 :+:      :+:    :+:   */
+/*   Cat.class.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: armitite <armitite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/07 17:32:12 by armitite          #+#    #+#             */
-/*   Updated: 2025/02/16 13:51:49 by armitite         ###   ########.fr       */
+/*   Created: 2025/02/07 15:26:41 by armitite          #+#    #+#             */
+/*   Updated: 2025/02/16 14:00:11 by armitite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGCAT_HPP
-# define WRONGCAT_HPP
-#include "WrongAnimal.class.hpp"
+#ifndef CAT_HPP
+# define CAT_HPP
+#include "AAnimal.class.hpp"
+#include "Brain.class.hpp"
 
-class WrongCat : public WrongAnimal {
+class Cat : public AAnimal {
 
 private:
 	
-	
+	Brain	*Cat_Brain;
 	
 public:
 
-	WrongCat(void);
-	WrongCat(WrongCat const &copy);
-	~WrongCat(void);
+	Cat(void);
+	Cat(Cat const &copy);
+	~Cat(void);
 
-	WrongCat	&operator=(WrongCat const &assign);
-
+	Cat	&operator=(Cat const &assign);
+	void			virtual makeSound(void) const;
+	
 };
 
 #endif
