@@ -6,7 +6,7 @@
 /*   By: armitite <armitite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 15:26:41 by armitite          #+#    #+#             */
-/*   Updated: 2025/02/07 16:18:59 by armitite         ###   ########.fr       */
+/*   Updated: 2025/02/22 11:16:11 by armitite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,6 @@
 #include "Animal.class.hpp"
 
 class Cat : public Animal {
-
-private:
-	
-	
 	
 public:
 
@@ -27,6 +23,8 @@ public:
 	~Cat(void);
 
 	Cat	&operator=(Cat const &assign);
+
+	void			makeSound(void) const;
 
 };
 
