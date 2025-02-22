@@ -6,7 +6,7 @@
 /*   By: armitite <armitite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 17:32:12 by armitite          #+#    #+#             */
-/*   Updated: 2025/02/16 13:55:20 by armitite         ###   ########.fr       */
+/*   Updated: 2025/02/22 11:22:02 by armitite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,6 @@
 #include "WrongAnimal.class.hpp"
 
 class WrongCat : public WrongAnimal {
-
-private:
-	
-	
 	
 public:
 
@@ -27,6 +23,8 @@ public:
 	~WrongCat(void);
 
 	WrongCat	&operator=(WrongCat const &assign);
+
+	void			makeSound(void) const;
 
 };
 

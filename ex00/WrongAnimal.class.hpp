@@ -6,7 +6,7 @@
 /*   By: armitite <armitite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 17:32:19 by armitite          #+#    #+#             */
-/*   Updated: 2025/02/22 11:14:06 by armitite         ###   ########.fr       */
+/*   Updated: 2025/02/22 11:25:27 by armitite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ public:
 
 	void			makeSound(void) const;
 	std::string		getType(void) const;
+	void			setType(std::string type);
 	
 };
 

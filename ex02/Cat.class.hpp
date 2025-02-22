@@ -6,7 +6,7 @@
 /*   By: armitite <armitite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 15:26:41 by armitite          #+#    #+#             */
-/*   Updated: 2025/02/16 14:00:11 by armitite         ###   ########.fr       */
+/*   Updated: 2025/02/22 13:39:23 by armitite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,10 @@ public:
 	~Cat(void);
 
 	Cat	&operator=(Cat const &assign);
-	void			virtual makeSound(void) const;
-	
+
+	void	makeSound(void) const;
+	Brain&	getBrain(void) const;
+
 };
 
 #endif

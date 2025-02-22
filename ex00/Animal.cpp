@@ -6,7 +6,7 @@
 /*   By: armitite <armitite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 15:26:43 by armitite          #+#    #+#             */
-/*   Updated: 2025/02/22 11:19:41 by armitite         ###   ########.fr       */
+/*   Updated: 2025/02/22 11:24:55 by armitite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 Animal::Animal(void) {
 
 	std::cout << "Animal default constructor called" << std::endl;
+	setType("No type");
+	
 	return ;
 }
 

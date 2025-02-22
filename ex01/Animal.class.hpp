@@ -6,7 +6,7 @@
 /*   By: armitite <armitite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 15:26:46 by armitite          #+#    #+#             */
-/*   Updated: 2025/02/07 17:29:18 by armitite         ###   ########.fr       */
+/*   Updated: 2025/02/22 12:23:48 by armitite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,9 @@
 
 class Animal {
 
-private:
-
-
 protected:
 
 	std::string type;
-	std::string sound;
 
 public:
 	
@@ -31,13 +27,10 @@ public:
 	Animal & operator=(Animal const &assign);
 	virtual ~Animal();
 
-	void			makeSound(void) const;
+	virtual void	makeSound(void) const;
 	void			setType(std::string type);
-	void			setSound(std::string sound);
 	std::string		getType(void) const;
 	
 };
-
-
 
 #endif

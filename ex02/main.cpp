@@ -6,7 +6,7 @@
 /*   By: armitite <armitite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 15:26:31 by armitite          #+#    #+#             */
-/*   Updated: 2025/02/16 14:03:32 by armitite         ###   ########.fr       */
+/*   Updated: 2025/02/22 13:52:38 by armitite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,20 +18,27 @@
 
 int main()
 {
-//const AAnimal* meta = new AAnimal();
-const AAnimal* j = new Dog();
-const AAnimal* i = new Cat();
-const WrongAnimal* k = new WrongCat();
-std::cout << "Type is : " << j->getType() << " " << std::endl;
-std::cout << "Type is : " << i->getType() << " " << std::endl;
-i->makeSound();
-j->makeSound();
-//meta->makeSound();
-k->makeSound();
+	//const AAnimal* meta = new AAnimal();
+	const AAnimal* j = new Dog();
+	const AAnimal* i = new Cat();
+	const WrongAnimal* k = new WrongCat();
+	std::cout << j->getType() << " " << std::endl;
+	std::cout << i->getType() << " " << std::endl;
+	//std::cout << meta->getType() << " " << std::endl;
+	std::cout << k->getType() << " " << std::endl;
+	std::cout << "Dog sound : ";
+	j->makeSound();
+	std::cout << "Cat sound : ";
+	i->makeSound();
+	//std::cout << "Default Animal sound : ";
+	//meta->makeSound();
+	std::cout << "Wrong cat sound : ";
+	k->makeSound();
 
-//delete meta;
-delete j;
-delete i;
-delete k;
-return 0;
+	//delete meta;
+	delete j;
+	delete i;
+	delete k;
+	return 0;
+
 }

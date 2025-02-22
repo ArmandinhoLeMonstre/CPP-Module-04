@@ -6,7 +6,7 @@
 /*   By: armitite <armitite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 15:26:33 by armitite          #+#    #+#             */
-/*   Updated: 2025/02/22 11:07:36 by armitite         ###   ########.fr       */
+/*   Updated: 2025/02/22 11:43:16 by armitite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,6 @@ Dog	&Dog::operator=(Dog const &assign) {
 
 void	Dog::makeSound(void) const {
 
-	
 	std::cout << "Waf" << std::endl;
 
 	return ;

@@ -6,7 +6,7 @@
 /*   By: armitite <armitite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 17:32:15 by armitite          #+#    #+#             */
-/*   Updated: 2025/02/22 11:16:38 by armitite         ###   ########.fr       */
+/*   Updated: 2025/02/22 11:26:29 by armitite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 WrongCat::WrongCat(void) {
 
 	std::cout << "WrongCat default constructor called" << std::endl;
+	setType("Wrong Cat");
 
 	return ;
 }

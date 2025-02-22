@@ -6,7 +6,7 @@
 /*   By: armitite <armitite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 15:26:33 by armitite          #+#    #+#             */
-/*   Updated: 2025/02/07 17:30:00 by armitite         ###   ########.fr       */
+/*   Updated: 2025/02/22 12:54:11 by armitite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ Dog::Dog(void) {
 
 	std::cout << "Dog default constructor called" << std::endl;
 	setType("Dog");
-	setSound("Waf");
 	this->Dog_Brain = new Brain();
 
 	return ;
@@ -27,10 +26,9 @@ Dog::Dog(void) {
 
 Dog::Dog(Dog const &copy) : Animal(copy) {
 
-	std::cout << "Dog default constructor called" << std::endl;
-	this->type = copy.type;
-	this->sound = copy.sound;
-	this->Dog_Brain = copy.Dog_Brain;
+	std::cout << "Dog copy constructor called" << std::endl;
+	this->Dog_Brain = NULL;
+	*this = copy;
 
 	return ;
 }
@@ -48,10 +46,22 @@ Dog	&Dog::operator=(Dog const &assign) {
 	if (this != &assign)
 	{
 		this->type = assign.type;
-		this->sound = assign.sound;
-		delete this->Dog_Brain;
+		if (this->Dog_Brain)
+			delete this->Dog_Brain;
 		this->Dog_Brain = new Brain(*assign.Dog_Brain);
 	}
 
 	return (*this);
+}
+
+void	Dog::makeSound(void) const {
+
+	std::cout << "Waf" << std::endl;
+
+	return ;
+}
+
+Brain&	Dog::getBrain(void) const {
+
+	return (*this->Dog_Brain);
 }

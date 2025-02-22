@@ -6,7 +6,7 @@
 /*   By: armitite <armitite@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/07 15:26:43 by armitite          #+#    #+#             */
-/*   Updated: 2025/02/07 17:25:31 by armitite         ###   ########.fr       */
+/*   Updated: 2025/02/22 11:40:40 by armitite         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 Animal::Animal(void) {
 
 	std::cout << "Animal default constructor called" << std::endl;
-	this->sound = "No sound";
+	setType("No type");
+	
 	return ;
 }
 
 Animal::Animal(Animal const &copy) {
 
 	std::cout << "Animal copy constructor called" << std::endl;
-	this->type = copy.type;
-	this->sound = copy.sound;
+	*this = copy;
 	
 	return ;
 }
@@ -40,7 +40,6 @@ Animal	&Animal::operator=(Animal const &assign) {
 	if (this != &assign)
 	{
 		this->type = assign.type;
-		this->sound = assign.sound;
 	}
 	
 	return (*this);
@@ -49,7 +48,7 @@ Animal	&Animal::operator=(Animal const &assign) {
 void	Animal::makeSound(void) const {
 
 	
-	std::cout << this->sound << std::endl;
+	std::cout << "No sound" << std::endl;
 
 	return ;
 }
@@ -66,9 +65,3 @@ std::string	Animal::getType(void) const {
 	return (this->type);
 }
 
-void	Animal::setSound(std::string sound) {
-
-	this->sound = sound;
-
-	return ;
-}
